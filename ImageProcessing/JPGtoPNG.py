@@ -12,9 +12,9 @@ if(not os.path.exists(outpur_folder)):
     os.makedirs(outpur_folder)
 
 for filename in os.listdir(img_folder):
-    new_name = list(map(str, filename.split(".")))[0]
+    clean_name = os.path.splitext(filename)[0]
     img = Image.open(f'{img_folder}/{filename}')
-    img.save(f'{outpur_folder}/{new_name}.png', 'png')
+    img.save(f'{outpur_folder}/{clean_name}.png', 'png')
 
 
 print("All files converted!")
