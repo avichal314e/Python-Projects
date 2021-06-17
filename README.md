@@ -1,1 +1,1 @@
-# Python Projects done in LearnXL Training Course
+# Python Projects done under LearnXL Learning Course
