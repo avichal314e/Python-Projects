@@ -20,6 +20,7 @@ email.set_content(html.substitute({'name': 'Rahul'}), 'html')
 with smtplib.SMTP(host='smtp.gmail.com', port=587) as smtp:
     smtp.ehlo()
     smtp.starttls()
-    smtp.login('sample2345dummy@gmail.com', "Hello@world24")     # Email and Password
+    smtp.login('sample2345dummy@gmail.com',
+               "Hello@world24")     # Email and Password
     smtp.send_message(email)
     print("Email Sent")
