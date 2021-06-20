@@ -4,8 +4,6 @@ import requests
 import sys
 import hashlib
 
-inputs = sys.argv[1:]
-
 
 def request_api_data(query_char):
     url = 'https://api.pwnedpasswords.com/range/' + query_char
@@ -43,8 +41,9 @@ def main(args):
                 f'{password} was found {count} times... You shoud probably change your password!!')
         else:
             print(f'{password} was not found... All good!!')
+    return 'Done!'
 
-    print('Done!')
 
-
-main(inputs)
+if __name__ == '__main__':
+    inputs = sys.argv[1:]
+    sys.exit(main(inputs))  # Prints Done!
