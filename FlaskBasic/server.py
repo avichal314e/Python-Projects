@@ -4,7 +4,7 @@
 
 # Running Server
 # export FLASK_APP=server.py
-# export Flask_ENV=development
+# export FLASK_ENV=development
 # flask run
 
 # Main files/folders: static/ templates/ server.py
